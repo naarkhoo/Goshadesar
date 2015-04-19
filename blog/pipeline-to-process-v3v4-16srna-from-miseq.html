@@ -91,9 +91,12 @@ Ruzane            </a>
     
 </footer><!-- /.post-info -->                </header>
             </div>
-            <html><body><p>Many people have complained about the new illumina protocol for sequencing V3 and V4 <strong>[reference needed].</strong> Here is a pipleline to get advantage of the most</p>
+            <html><body><p>Illumina has introduced the possibility of 300bp sequencing for 16sRNA; this has encouraged a lot of researchers to sequence both V3 and V4 regions and have a more accurate microbiome profiles. The alternative methods that was excercised so far and Patric Scloss advocate is the using the 250bp reads for sequencing the only V3 region.</p>
+<p>However, many people have <a href="http://blog.mothur.org/2014/09/11/Why-such-a-large-distance-matrix%3F/">complained</a> about the new illumina protocol for sequencing V3 and V4. The main argument against sequencing two regions with longer reads is the quality of 300 bp reads. <a href="http://blog.mothur.org/2014/09/11/Why-such-a-large-distance-matrix%3F/">Pat Schloss</a> has shown that the quality of base pairs after ~250 is same and the extera 50bp (at each end) is junk. So it is not going to cover entirly both V3 and V4; and the low quality base pair increase the number of unique sequences which will results in higher number of spicies. His methods looks more reasonable because the V3 reagion is shorter than 500bp and reads that lay down on the region V3 have an overal higher quality. Mothur never finishes the analysis because the corrlation matrix is extremely huge.</p>
+<p>Here is a pipleline to get advantage of the most.</p>
 <p>I have just put it in gist
 <a href="https://gist.github.com/naarkhoo/25dc9da1ddc474bec624">gist</a></p>
+<p>![my pipeline][1]</p>
 <blockquote>
 <p><strong>Note:</strong></p>
 <ul>
@@ -101,18 +104,11 @@ Ruzane            </a>
 <li>hopefully I will find time to keep it clean and readable.</li>
 </ul>
 </blockquote>
-<ol>
-<li>
-<p>The main argument is about the quality of 300 bp reads. He had showed that the quality of base pairs after ~250 is same and the extera 50bp (at each end) is junk. So it is not going to cover entirly both V3 and V4; and the low quality base pair increase the number of unique sequences which will results in higher number of spicies ! His methods looks more reasonable because the V3 reagion is shorter than 500bp and reads that lay down on the region V3 have an overal higher quality.</p>
-</li>
-<li>
-<p>Pat Schloss protocol for sequencing 16sRNA data looks more reliable than the exiciting illumina protocol. 
-Before citing the argument, I have to say, illumina has introduced the possibility of 300bp sequencing for 16sRNA; this has encouraged a lot of researchers to sequence both V3 and V2 regions and have a more accurate microbiome profiles. The alternative methods that was excercised so far and Patric Scloss advocate is the using the 250bp reads for sequencing the only V3 region.</p>
-</li>
-<li>
-<p>the quality of mothur assembly (make.contig) looks lower than FLASH. By quality I mean the reasonable lenght for the contig lenght is much higher than forward_lenght+reverse_length; I know mothur has a lot of smart filtering ways to exclude these bad contiges; but based on my analysis seems the contigs made by FLASH are more at the first place.<img alt="my pipeline" src="http://naarkhoo.github.io/Goshadesar/images/mypipeline.png" style="width: 1368px; height: auto; max-width: 100%;"/></p>
-</li>
-</ol></body></html>
+<h2>FLASH vs make.contig</h2>
+<p>The quality of mothur assembly (make.contig) looks lower than <a href="http://ccb.jhu.edu/software/FLASH/">FLASH</a>. By quality I mean the reasonable lenght for the contig lenght is much higher than <em>forward_lenght+reverse_length</em>; I know mothur has a lot of smart filtering ways to exclude these bad contiges; but based on my analysis seems the contigs made by FLASH are more at the first place.</p>
+<p>![flash][2]</p>
+<p>[1]: {filename}/images/mypipeline.png =0.5x
+  [2]: {filename}/images/comparision_mothur_flash.png =0.5x</p></body></html>
             <!-- /.entry-content -->
     <hr/>
     <section class="comments" id="comments">
