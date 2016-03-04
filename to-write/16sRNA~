@@ -1,0 +1,8 @@
+point 1
+Pat Schloss protocol for sequencing 16sRNA data looks more reliable than the exiciting illumina protocol. 
+Before citing the argument, I have to say, illumina has introduced the possibility of 300bp sequencing for 16sRNA; this has encouraged a lot of researchers to sequence both V3 and V2 regions and have a more accurate microbiome profiles. The alternative methods that was excercised so far and Patric Scloss advocate is the using the 250bp reads for sequencing the only V3 region.
+
+The main argument is about the quality of 300 bp reads. He had showed that the quality of base pairs after ~250 is same and the extera 50bp (at each end) is junk. So it is not going to cover entirly both V3 and V4; and the low quality base pair increase the number of unique sequences which will results in higher number of spicies ! His methods looks more reasonable because the V3 reagion is shorter than 500bp and reads that lay down on the region V3 have an overal higher quality.
+
+point 2
+the quality of mothur assembly (make.contig) looks lower than FLASH. By quality I mean the reasonable lenght for the contig lenght is much higher than forward_lenght+reverse_length; I know mothur has a lot of smart filtering ways to exclude these bad contiges; but based on my analysis seems the contigs made by FLASH are more at the first place.

@@ -1,0 +1,53 @@
+http://www.nature.com/nmeth/journal/v11/n9/pdf/nmeth.3091.pdf
+Biological replicates are parallel measurements of biologically distinct samples that capture random
+biological variation, which may itself be a subject of study or a noise source.
+
+Technical replicates are repeated measurements of the same sample that represent independent measures of the random noise
+associated with protocols or equipment. averaging technical replicates can limit the impact of measure ment error, but taking additional biological replicates is often prefer able for improving the efficiency of statistical testing. 
+
+
+
+which sources of variation are being studied or, alternatively, viewed as noise sources. (very imporatant)
+
+
+
+How does one determine the types, levels and number of replicates to include in a study, and the extent to which they contribute information about important sources of variation?
+
+
+three levels of replication: ( level has a different variance ) 
+	animals, 
+	cells
+	measurements (variance from the assay)
+
+
+We next simulated 48 measurements, allocated variously between biological replicates 
+	(the number of animals (n_A), and number of cells (n_C) sampled per animal (n_M)) 
+	nA nC nM = 48.
+
+the effective sample size, n, will vary from about 2 to 48, depending on how the measurements are allocated. Let us look at how this comes about.
+Different choices of nA nC and nM impact this value differently.
+
+
+
+If we sample n_c=48 cells from a single animal (nA = 1) and measure each (n_M =1) times, our estimate of the total variance reflects cells and technical variance not animal variation;
+
+Another extreme, if all our measurements are technical replicates (nA = nC = 1, nM=48); we only investiate the technical variance; it would cause an excess of false positives.
+
+ Be on the lookout: unusually small error bars on biological measurements may merely reflect measurement error, not biological variation.
+
+
+the optimal way to minimize the number of data is
+	as many as possible animal (nA=48) regardless of the ratios of the variance in the system
+	number of animals contributes to decreasing each contribution to the total variance
+	technical sample only allow us to detemine (technical variance); (is it our interests?) - unless this is a quanityt of interests we should omit technical replicates and maximize nA.
+	samples from animals and cells should be mixed across technical measurments) to minimze the effect of any systematic run-to-run variablity.
+
+The number of replicates has a practical effect on inference errors in analysis of differences of means or variances.
+	Biological replicates are preferable to technical replicates for inference about the mean and variance of a biological population. 
+
+	Good experimental design practice includes planning for replication. First, identify the questions the experiment aims to answer.
+Next, determine the proportion of variability induced by each step to distribute the capacity for replication of the experiment across
+steps. Be aware of the potential for pseudoreplication and aim to design statistically independent replicates. 
+
+
+
